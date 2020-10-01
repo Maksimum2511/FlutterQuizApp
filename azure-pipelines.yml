@@ -16,10 +16,10 @@ steps:
 - task: aloisdeniel.flutter.flutter-install.FlutterInstall@0
   displayName: 'Flutter Install'
 
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: aloisdeniel.flutter.flutter-build.FlutterBuild@0
+  displayName: 'Flutter Build iOS'
+  inputs:
+    target: ios
+    buildNumber: '$(buildNumber)'
+    buildName: '$(package.version)'
+    iosCodesign: false

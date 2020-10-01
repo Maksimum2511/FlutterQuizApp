@@ -10,6 +10,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- task: aloisdeniel.flutter.flutter-install.FlutterInstall@0
+  displayName: 'Flutter Install'
+
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 

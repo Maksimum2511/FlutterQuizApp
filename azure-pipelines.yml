@@ -15,10 +15,6 @@ steps:
 
 - script: |
    gem install bundler
-   
-   bundle update --bundler
-   
-   bundle install
   workingDirectory: ios
   displayName: 'Ruby bundle setup'
 

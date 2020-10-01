@@ -13,19 +13,6 @@ steps:
 - script: 'brew install fastlane'
   displayName: 'Install fastlane'
 
-- script: |
-   gem install bundler
-   
-   bundle update --bundler
-   
-   bundle install
-  workingDirectory: ios
-  displayName: 'Ruby bundle setup'
-
-- script: 'bundle exec fastlane profile'
-  workingDirectory: ios
-  displayName: 'Update provisioning profile'
-
 - task: aloisdeniel.flutter.flutter-install.FlutterInstall@0
   displayName: 'Flutter Install'
 

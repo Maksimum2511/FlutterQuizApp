@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  demands: xcode
+  vmImage: 'macOS-latest'
 
 steps:
 - script: 'brew install fastlane'
